@@ -16,7 +16,7 @@ export const goalCompletions = pgTable('goal_completions', {
   id: text('id')
     .primaryKey()
     .$defaultFn(() => createId()),
-  goaldId: text('goal_id')
+  goalId: text('goal_id')
     .references(() => goals.id)
     .notNull(),
   createdAt: timestamp('created_at', { withTimezone: true })

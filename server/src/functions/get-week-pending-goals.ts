@@ -25,7 +25,7 @@ export async function getWeekPendingGoals() {
   const goalCompletionCounts = db.$with('goal_completions_counts').as(
     db
       .select({
-        goalId: goalCompletions.goaldId,
+        goalId: goalCompletions.goalId,
         completionCount: count(goalCompletions.id).as('completionCount'),
       })
       .from(goalCompletions)
@@ -35,7 +35,7 @@ export async function getWeekPendingGoals() {
           lte(goalCompletions.createdAt, lastDayOfWeek)
         )
       )
-      .groupBy(goalCompletions.goaldId)
+      .groupBy(goalCompletions.goalId)
   )
 
   const pendingGoals = await db
