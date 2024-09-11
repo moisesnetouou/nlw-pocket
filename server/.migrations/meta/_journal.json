@@ -8,6 +8,13 @@
       "when": 1725943222212,
       "tag": "0000_aberrant_puppet_master",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1726022454413,
+      "tag": "0001_past_mole_man",
+      "breakpoints": true
     }
   ]
 }
